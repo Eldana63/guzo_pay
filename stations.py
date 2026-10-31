@@ -1,65 +1,22 @@
-'''word={"cake":4,"chair":5,"banana":6}
+STATION=[{"name":["Addisu","Asela"],"city":"Adama","Region":"Oromia"},
+ {"name":["kaliti","lamberet","Awtobis tera"],"city":"Addis Ababa","Region":"Addis Ababa"},
+{"name":["Bishoftu"],"city":"Bishoftu","Region":"Oromia"},
+{"name":["Bahrdar"],"city":"Bahrdar","Region":"Amhara"},
+{"name":["Mekele"],"city":"Mekele","Region":"Tigray"},
+{"name":["Gondar"],"city":"Gondar","Region":"Amhara"},
+{"name":["Jijiga"],"city":"Jijiga","Region":"Somali"},
+{"name":["Harar"],"city":"Harar","Region":"Harari"},
+{"name":["Dire Dawa"],"city":"Dire Dawa","Region":"Dire Dawa"},
+{"name":["Awash"],"city":"Awash","Region":"Afar"},
+{"name":["Dessie","Woldiya"],"city":"Dessie","Region":"Amhara"},
+{"name":["Jimma","Agaro"],"city":"Jimma","Region":"Oromia"},
+{"name":["Shashemene","Arsi Negele"],"city":"Shashemene","Region":"Oromia"},
+{"name":["Hawassa","Wondo Genet"],"city":"Hawassa","Region":"SNNPR"}
+]
 
-def main():
-    print("welcome")
-    print("you have: A B C F K I H R")
-    dd= input("what do you wanna to do?" )
-    if dd=="play":
-        while len(word)>0:
-            guess=input("guss word ")
-            if guess in word.keys():
-                if guess=="ABABA":
-                    word.clear()
-                    print("you won")
-                del word[guess]
-                print (f"you left {len(word)}")
-            else:
-                print("you lost")
-                ask=input("you wanna stop: ")
-                if ask=="yes":
-                    break
-                else:
-                    continue
+print("Welcome to Ethiopin bus Terminal" )
+User=input("which terminal do you want? ")
 
-    elif dd=="check":
-        for key,value in word.items():
-            print(f"{key} worth {value} point")
-    else:
-        print("invalid") 
-
-main()
-
-
-
-def main():
-    n=int(input())
-    for _ in range(n):
-        print(letter(input(),"mario"))
-
-def letter(reciever,sender):
-    return f"""
-===========================================
-  Dear {reciever}\
-  hvcjhsgyfgsxznmpfo'w;eovc,
-  to{sender}
-
-"""
-
-main()
-'''
-
-
-def main():
-    counts={}
-    words = get_words("file.txt")
-
-    for word in words:
-        if word in counts:
-            counts[word]+=1
-        else:
-            counts[word]=1
-
-    save_counts(counts)
-
-main()    
-
+for station in STATION:
+    if User=="All":
+       print(" ".join(station["name"]), station["city"],station["Region"])
