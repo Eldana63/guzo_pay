@@ -15,8 +15,16 @@ STATION=[{"name":["Addisu","Asela"],"city":"Adama","Region":"Oromia"},
 ]
 
 print("Welcome to Ethiopin bus Terminal" )
-User=input("which terminal do you want? ")
-
-for station in STATION:
-    if User=="All":
-       print(" ".join(station["name"]), station["city"],station["Region"])
+def search_by_city(city):
+   found=False
+   for station in STATION:
+      if city=="All":
+         print(" ".join(station["name"]), station["city"],station["Region"])
+         found=True
+      elif city==station["city"].lower():
+         print(" ".join(station["name"]))
+         found=True
+   if not found:
+      print("nothing is found")
+user=input("which city do you want? ").strip().lower()
+search_by_city(user)
