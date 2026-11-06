@@ -18,12 +18,16 @@ print("Welcome to Ethiopin bus Terminal" )
 def search_by_city(city):
    found=False
    for station in STATION:
+      sta=[s.lower()for s in station["name"]]
       if city=="All":
          print(" ".join(station["name"]), station["city"],station["Region"])
          found=True
       elif city==station["city"].lower():
          print(" ".join(station["name"]))
          found=True
+      elif city in sta:
+         print((station["city"]))
+         found = True
    if not found:
       print("nothing is found")
 user=input("which city do you want? ").strip().lower()

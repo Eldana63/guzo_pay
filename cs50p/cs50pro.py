@@ -1,4 +1,4 @@
-Amount=50
+'''Amount=50
 
 print("Amount Due:", Amount)
 while Amount>0:
@@ -11,6 +11,13 @@ while Amount>0:
           print("Amount Due:", Amount)
     else:
            print("Amount Due:", Amount)
-    
+'''
+
+vowel=['a','e','i','o','u']
+
+ask=input()
+for letter in vowel:
+     ask=ask.replace(letter,"")
+print (ask)
 
 

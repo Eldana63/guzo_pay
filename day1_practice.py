@@ -24,17 +24,13 @@ def grade(score):
     else:
         return 'F'''
 
-b=2
-c=1
-a=4
-dis=b**2-4*a*c
-if dis>0:
-    root1=(-b+dis**0.5)/(2*a)
-    root2=(-b-dis**0.5)/(2*a)
-    print(root1 & root2)
-elif dis==0:
-    root1=root2=(-b) /(2*a)
-    print(root1)
-else:
-    print("no real sol")
+
+
+while True:
+    try:
+        n=int(input("num" ))
+        break
+    except ValueError:
+        print("not")
+
 
